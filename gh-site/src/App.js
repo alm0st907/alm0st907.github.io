@@ -1,24 +1,32 @@
-import React from 'react'
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+//react markdown libs
+import ReactMarkdown from 'react-markdown'
+import Menu from "./Menu";
+//simple markdown literal text
+const markdown =
+    `# Maybe 
+    - first list
+    - second list
+    - third list
+     - sublist
+    - sub sublist
+     `
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu/>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+              Don't worry, I'm working on it.
+          </p>
+          {/* we can add the mardkwon like this later */}
+          {/*<ReactMarkdown children={markdown}/>*/}
+        </header>
     </div>
   );
 }
