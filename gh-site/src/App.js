@@ -2,20 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-//react markdown libs
-import ReactMarkdown from 'react-markdown'
 import Menu from "./Menu";
-//simple markdown literal text
-const markdown =
-    `# Maybe 
-    - first list
-    - second list
-    - third list
-     - sublist
-    - sub sublist
-     `
+import MarkdownEntry from "./MarkdownEntry";
+
 
 function App() {
+
   return (
     <div className="App">
       <Menu/>
@@ -24,8 +16,8 @@ function App() {
           <p>
               Don't worry, I'm working on it.
           </p>
-          {/* we can add the mardkwon like this later */}
-          {/*<ReactMarkdown children={markdown}/>*/}
+          {/* we can add the markdown like this later */}
+            <MarkdownEntry/>
         </header>
     </div>
   );
